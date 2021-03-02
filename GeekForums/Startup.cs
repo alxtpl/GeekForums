@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using GeekForums.Data;
 using GeekForums.Services;
 using GeekForums.Data.Models;
+using GeekForums.Service;
 
 namespace GeekForums
 {
@@ -32,6 +33,7 @@ namespace GeekForums
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddScoped<IForum, ForumService>();
 
             services.AddMvc();
         }
