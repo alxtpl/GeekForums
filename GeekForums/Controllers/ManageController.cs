@@ -13,6 +13,7 @@ using Microsoft.Extensions.Options;
 using GeekForums.Models;
 using GeekForums.Models.ManageViewModels;
 using GeekForums.Services;
+using GeekForums.Data.Models;
 
 namespace GeekForums.Controllers
 {
