@@ -11,8 +11,8 @@ using System;
 namespace GeekForums.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210302083623_Add initial entity models")]
-    partial class Addinitialentitymodels
+    [Migration("20210307185358_Update ApplicationUser")]
+    partial class UpdateApplicationUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,9 +36,13 @@ namespace GeekForums.Data.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
+                    b.Property<bool>("IsActive");
+
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<DateTime>("MemberSince");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256);
@@ -51,6 +55,10 @@ namespace GeekForums.Data.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<string>("ProfileImageUrl");
+
+                    b.Property<int>("Rating");
 
                     b.Property<string>("SecurityStamp");
 
@@ -79,7 +87,7 @@ namespace GeekForums.Data.Migrations
 
                     b.Property<DateTime>("Created");
 
-                    b.Property<string>("Ddescription");
+                    b.Property<string>("Description");
 
                     b.Property<string>("ImageUrl");
 
