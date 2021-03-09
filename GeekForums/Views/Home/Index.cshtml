@@ -3,8 +3,8 @@
 <div class="container body-content">
     <div class="row frontPageSplash">
         <div class="col-md-6 frontPageLearn">
-            <div class="frontPageHeading">Breaking news, sport, TV, radio and a whole lot more.</div>
-            <p class="frontPageSubHeading">Geek Forums is the world's fastest growing news forum.</p>
+            <div class="frontPageHeading"><h2>Breaking news, sport, TV, radio and a whole lot more</h2></div>
+            <p class="frontPageSubHeading">Geek Forums is the world's fastest growing forum.</p>
             <div>
                 <form asp-controller="Search" asp-action="Search" method="post">
                     <input asp-for="SearchQuery" type="text" class="homeSearch" placeholder="Search..." />
@@ -41,14 +41,7 @@
                                 {
                                     <span>@post.RepliesCount Replies</span>
                                 }
-                                | <span class="postUser">
-                                    <a asp-controller="Profile" asp-action="Detail" asp-route-id="@post.AuthorId"> </a>@post.AuthorName
-</span>
-
-                                (@post.AuthorRating) in <span class="postForum"> 
-                                    <a asp-controller="Forum" asp-action="Topic" asp-route-id="@post.Forum.Id"> @post.Forum.Name</a>
-                                </span> on
-                                <span class="postDate">@post.DatePosted</span>
+                                | <span class="postUser"><a asp-controller="Profile" asp-action="Detail" asp-route-id="@post.AuthorId"></a>@post.AuthorName</span> (@post.AuthorRating) in <span class="postForum"><a asp-controller="Forum" asp-action="Topic" asp-route-id="@post.Forum.Id">@post.Forum.Name</a></span> on <span class="postDate">@post.DatePosted</span>
                             </div>
                         </td>
                         <td></td>
@@ -57,3 +50,4 @@
             </tbody>
         </table>
     </div>
+</div>
